@@ -9,8 +9,8 @@ from keras.models import load_model
 
 #enter the desired result set filenames
 
-trainresultfilename="10k100epochs_d50_b128_2L_train.txt"
-testresultfilename="10k100epochs_d50_b128_2L_test.txt"
+trainresultfilename="27testing_100epochs_d50_b128_L3_train.txt"
+testresultfilename="27testing_100epochs_d50_b128_L3_test.txt"
 #load the dataset
 def load_clean_sentences(filename):
     return load(open(filename,'rb'))
