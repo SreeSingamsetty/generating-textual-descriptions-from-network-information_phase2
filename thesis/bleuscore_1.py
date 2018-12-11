@@ -11,11 +11,11 @@ from nltk.translate import bleu
 import pandas as pd
 
 chencherry=SmoothingFunction()
-trainresultfilename="10k75epochs_d50_b128_train.txt" #enter the training output file name
-testresultfilename="10k75epochs_d50_b128_test.txt" #enter the testing output file name
-dataset="10k.csv"
-trainbleuscorefile=trainresultfilename[:-4]+"_bluescore_new.txt"
-testbleuscorefile=testresultfilename[:-4]+"_bluescore_new.txt"
+trainresultfilename="27testing_100epochs_d50_b128_L3_train.txt" #enter the training output file name
+testresultfilename="27testing_100epochs_d50_b128_L3_test.txt" #enter the testing output file name
+dataset="27testing.csv"
+trainbleuscorefile=trainresultfilename[:-4]+"_bleuscore.txt"
+testbleuscorefile=testresultfilename[:-4]+"_bleuscore.txt"
 
 resultdf=pd.read_csv(testresultfilename,sep='\t',header=None)
 print("resultdf shape: ",resultdf.shape)
