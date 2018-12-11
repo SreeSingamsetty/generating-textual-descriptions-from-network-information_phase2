@@ -74,9 +74,9 @@ def evaluate_model(model,tokenizer,subjects,raw_dataset,filename):
 
 
 #loading the datasets
-dataset=load_clean_sentences('my10k.pkl')
-train=load_clean_sentences("my10k_train.pkl")
-test=load_clean_sentences("my10k_test.pkl")
+dataset=load_clean_sentences('27testing.pkl')
+train=load_clean_sentences("27testing_train.pkl")
+test=load_clean_sentences("27testing_test.pkl")
 
 #subj tokenizer
 sub_tokenizer=create_tokenizer(dataset[:,0])
@@ -100,7 +100,7 @@ print(testx.shape)
 
 
 #loading the model:
-model=load_model('model_10k100epochs_d50_b128_2L.h5')
+model=load_model('model_27testing_60epochs_d50_b128_L3.h5')
 print('training in progress')
 evaluate_model(model,obj_tokenizer,trainx,train,trainresultfilename)
 
