@@ -2,9 +2,9 @@
 #for adjusting tab between the node name and embeddings in the generated embeddings file.
 import regex as re
 #enter previously generated embedding file name
-with open("10k_200.emb","r") as f:
+with open("27testing.emb","r") as f:
     # enter desired new embedding file name
-    with open("10k_200_online.emb","w") as w:
+    with open("27testing_online.emb","w") as w:
         next(f)
         for line in f:
             line = re.sub(r'\t', ' ', line)
