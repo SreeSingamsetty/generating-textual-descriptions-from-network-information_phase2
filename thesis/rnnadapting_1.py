@@ -150,7 +150,7 @@ model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accurac
 
 #print summary
 print(model.summary())
-plot_model(model,to_file='model_27testing_60epochs_d50_b128_L3.png',show_shapes=True)
+plot_model(model,to_file='model_27testing_100epochs_d50_b128_L3.png',show_shapes=True)
 #fitting
 filename='model_27testing_60epochs_d50_b128_L3.h5'
 checkpoint=ModelCheckpoint(filename,monitor='val_loss',verbose=1,save_best_only=True,mode='min')
@@ -163,7 +163,7 @@ plt1.title('Model accuracy')
 plt1.ylabel('Accuracy')
 plt1.xlabel('Epoch')
 plt1.legend(['Train', 'Test'], loc='upper left')
-plt1.savefig("27testing_60epochs_d100_b128_acc_L3.png")
+plt1.savefig("27testing_100epochs_d50_b128_L3_acc.png")
 plt1.close()
 
 
@@ -174,4 +174,4 @@ plt2.title('Model loss')
 plt2.ylabel('Loss')
 plt2.xlabel('Epoch')
 plt2.legend(['Train', 'Test'], loc='upper left')
-plt2.savefig("27testing_60epochs_d50_b128_loss_L3.png")
+plt2.savefig("27testing_100epochs_d50_b128_L3_loss.png")
